@@ -1,0 +1,6 @@
+timestamp,user,action
+1696329600000,alice,login
+1696329610000,alice,click
+1696329620000,bob,login
+1696329630000,alice,logout
+1696329640000,bob,logout

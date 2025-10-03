@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  engine:
+    build:
+      context: .                # le contexte = racine du projet
+      dockerfile: test/Dockerfile
+    image: logwars:student
+    container_name: logwars_engine
+    environment:
+      - DATASET=${DATASET:-/data/logs_S.csv}
+      - QUERIES=${QUERIES:-/queries/suite_public.json}
+      - RUNS=${RUNS:-5}
+      - INDEX_DIR=${INDEX_DIR:-/index}
+    volumes:
+      - ./data:/data:ro
+      - ./queries:/queries:ro
+      - ./out:/out
+      - ./index:/index
+    tmpfs:
+      - /tmp
+    shm_size: '1gb'
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+    tty: true
+
+  shell:
+    image: logwars:student
+    depends_on:
+      - engine
+    entrypoint: ["/bin/bash"]
+    volumes:
+      - ./data:/data:ro
+      - ./queries:/queries:ro
+      - ./out:/out
+      - ./index:/index
+    stdin_open: true
+    tty: true

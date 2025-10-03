@@ -1,0 +1,10 @@
+{
+  "rows": 5,
+  "timeRange": {
+    "minTs": 1696329600000,
+    "maxTs": 1696329640000
+  },
+  "distinctUsers": 2,
+  "distinctActions": 3,
+  "buildMs": 14
+}

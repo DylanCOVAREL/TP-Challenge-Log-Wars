@@ -1,0 +1,35 @@
+[
+  {
+    "type": "q1",
+    "t1": 1696329600000,
+    "t2": 1696329640000,
+    "latency_ms": 10,
+    "result": 2
+  },
+  {
+    "type": "q2",
+    "t1": 1696329600000,
+    "t2": 1696329640000,
+    "k": 2,
+    "latency_ms": 9,
+    "result": [
+      {
+        "action": "login",
+        "count": 2
+      },
+      {
+        "action": "logout",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "type": "q3",
+    "t1": 1696329600000,
+    "t2": 1696329640000,
+    "user": "alice",
+    "action": "login",
+    "latency_ms": 4,
+    "result": 1
+  }
+]

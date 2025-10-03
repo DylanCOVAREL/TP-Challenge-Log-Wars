@@ -2,13 +2,20 @@
   "name": "logwars-engine",
   "version": "1.0.0",
   "description": "Moteur de logs pour le TP Log Wars",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
   "type": "module",
+  "bin": {
+    "engine": "dist/cli.ts"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js"
+  },
   "dependencies": {
     "commander": "^11.0.0",
     "fast-csv": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.7",
+    "typescript": "^5.6.3"
   }
 }
