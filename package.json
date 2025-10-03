@@ -1,0 +1,14 @@
+{
+  "name": "logwars-engine",
+  "version": "1.0.0",
+  "description": "Moteur de logs pour le TP Log Wars",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "fast-csv": "^4.3.6"
+  }
+}
